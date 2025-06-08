@@ -112,7 +112,7 @@ import org.openqa.selenium.WebDriver;
      public void titleValidationTest(){
         String actualTitle = driver.getTitle();
         String expectedTitle = "My Simple Website";// title should be match with the index.html title
-         Assert.assertEquals(driver.getTitle(), "GitHub - NANDITHA-nan/DevOps-MVN: maven");
+         Assert.assertEquals(driver.getTitle(),"GitHub - NANDITHA-nan/DevOps-MVN: maven");
          //given github login  username and the repository name with description
 
          assertTrue(true, "Title should contain 'ci/cd'");
