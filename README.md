@@ -124,3 +124,49 @@ import org.openqa.selenium.WebDriver;
          driver.quit();
     }
   }
+
+
+  jenkins
+  wget https://get.jenkins.io/war/latest/jenkins.war
+
+
+
+  7th
+  wsl -install
+    suso apt install wsl
+    sudo apt install wsl
+    wsl
+    >sudo apt upgrade
+>sudo apt install ansible -y
+>ansible --version
+>mkdir ansible_project
+>cd ansible_project
+>nano host
+It opens a tab there type
+>[local]
+>localhosts ansible_connection=local
+Press ctrl+o then enter again ctrl+x
+> ansible -i hosts local -m ping
+> nano install_nginx.yml
+It opens a tab there type-: 
+---
+- name: Install and start NGINX on localhost
+  hosts: local
+  become: yes
+
+  tasks:
+   - name: Install NGINX
+     apt:
+      name: nginx
+      state: present
+      update_cache: yes
+
+   - name: Ensure NGINX is running
+     service:
+      name: nginx
+      state: started
+      enabled: yes
+Press ctrl+o then enter again ctrl+x
+> ansible-playbook -i hosts install_nginx.yml
+> curl http://localhost
+
